@@ -17,7 +17,6 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 
 header{height:60px;padding:0 max(20px,4.5%);position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;z-index:5;background:#ffffffd9;backdrop-filter:saturate(1.8) blur(16px);border-bottom:1px solid transparent}
 .brand{font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--text)}
-.brand span{font-size:9px;color:var(--blue);margin-left:3px;vertical-align:2px}
 .header-note{font-size:13px;color:var(--text-3);letter-spacing:-.01em}
 .small-button{padding:9px 16px;border:0;border-radius:10px;background:var(--blue);color:#fff;font-size:14px;font-weight:600;letter-spacing:-.01em;transition:background .15s}
 .small-button:hover{background:var(--blue-press)}
@@ -27,6 +26,7 @@ header{height:60px;padding:0 max(20px,4.5%);position:fixed;top:0;width:100%;disp
 .ambient{display:none}
 .story{position:absolute;left:8%;top:30%;z-index:2;pointer-events:none;width:43%}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:0;color:var(--blue);margin-bottom:16px}
+.story .eyebrow{font-size:18px;letter-spacing:-.02em}
 h1{font-size:clamp(34px,3.8vw,56px);font-weight:700;line-height:1.28;letter-spacing:-.04em;margin:0 0 18px;color:var(--text)}
 p{font-size:17px;line-height:1.7;color:var(--text-2);letter-spacing:-.02em;margin:0}
 .chapter{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--text-3);margin-top:32px}
@@ -95,7 +95,7 @@ footer>span:last-child{font-size:12px;color:var(--text-3)}
   header{height:52px;padding:0 16px}.brand{font-size:18px}.header-note{display:none}.small-button{padding:8px 13px;font-size:13px}
   .stage{min-height:720px}
   .story{left:6%;top:14%;width:88%}
-  .eyebrow{font-size:12px;margin-bottom:10px}
+  .eyebrow{font-size:12px;margin-bottom:10px}.story .eyebrow{font-size:15px}
   h1{font-size:30px;margin-bottom:12px}
   .story p{font-size:14px}
   .chapter{display:none}

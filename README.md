@@ -1,4 +1,4 @@
-# STUDYCAP · Next.js
+# 스터디 캡슐 옥길 · Next.js
 
 Next.js App Router + React + TypeScript 기반의 캡슐 체험 프로토타입입니다.
 

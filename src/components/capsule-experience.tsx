@@ -36,7 +36,7 @@ export default function CapsuleExperience() {
   {action: "noise", label: "백색소음", value: panel.noise === 0 ? "꺼짐" : `${panel.noise}/${NOISE_STEPS}`, pressed: panel.noise > 0},
  ];
  return <div style={style}>
-<header><a className="brand" href="#">studycap<span>●</span></a><span className="header-note">한 사람을 위한, 온전한 공간</span><button className="small-button" id="enter" onClick={() => scrollToProgress(.74)}>공간 체험하기</button></header>
+<header><a className="brand" href="#">스터디 캡슐 옥길</a><span className="header-note">한 사람을 위한, 온전한 공간</span><button className="small-button" id="enter" onClick={() => scrollToProgress(.74)}>공간 체험하기</button></header>
 <main>
 <section className="journey" id="journey" ref={journeyRef} aria-label="스크롤로 캡슐 공간 둘러보기">
 <div className={chapter === 2 ? "stage inside" : "stage"}>
@@ -53,6 +53,6 @@ export default function CapsuleExperience() {
 </div>
 <div className="scroll-hint" id="scroll-hint" style={{opacity: chapter === 2 ? 0 : 1}}><span className="mouse"></span>스크롤해서 들어가기</div><div className="progress"><div id="progress" style={{width: `${progress * 100}%`}}></div></div>
 </div></section>
-<section className="closing"><div className="eyebrow">나만의 자리</div><h2>합격 하나만 보고,<br />내 페이스로.</h2><p>작지만 온전히 내 것인 공부 공간.<br />실제 공간을 둘러보고 나에게 맞는 자리를 찾아보세요.</p><div className="closing-actions"><button id="replay" onClick={() => scrollToProgress(0)}>다시 체험하기</button><a href="https://naver.me/xeAf3z7Q" target="_blank" rel="noopener noreferrer">네이버에서 실제 공간 보기</a></div><footer><span className="brand">studycap<span>●</span></span><span>공간 체험 프로토타입 · 실제 시설 및 사양과 다를 수 있습니다.</span></footer></section>
+<section className="closing"><div className="eyebrow">나만의 자리</div><h2>합격 하나만 보고,<br />내 페이스로.</h2><p>작지만 온전히 내 것인 공부 공간.<br />실제 공간을 둘러보고 나에게 맞는 자리를 찾아보세요.</p><div className="closing-actions"><button id="replay" onClick={() => scrollToProgress(0)}>다시 체험하기</button><a href="https://naver.me/xeAf3z7Q" target="_blank" rel="noopener noreferrer">네이버에서 실제 공간 보기</a></div><footer><span className="brand">스터디 캡슐 옥길</span><span>공간 체험 프로토타입 · 실제 시설 및 사양과 다를 수 있습니다.</span></footer></section>
 </main></div>;
 }
