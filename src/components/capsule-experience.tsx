@@ -6,9 +6,9 @@ import {useCapsuleScroll} from "./use-capsule-scroll";
 
 const CapsuleRoom = dynamic(() => import("./capsule-room"), {ssr: false});
 const stories = [
- {heading: ["세상은 잠시 밖에.", "여기는, 오직 나."], description: ["나만의 리듬으로 공부하는 1인 캡슐.", "스크롤하며 당신의 공간으로 들어가 보세요."], label: "나만의 공간을 만나다"},
- {heading: ["문을 열면,", "집중이 시작되는 곳."], description: ["책상부터 작은 수납까지.", "한 사람의 시간을 위해 채운 공간을 만나보세요."], label: "몰입의 안쪽으로"},
- {heading: ["이제, 나에게 맞는", "공간으로."], description: ["조명의 밝기와 색을 바꿔보세요.", "화면 아래 버튼이나 스탠드 패널을 눌러 보세요."], label: "내 취향으로 완성하다"},
+ {heading: ["합격까지 필요한 건", "나만의 자리 하나."], description: ["옆자리 눈치 없이, 남들 시선 없이.", "스크롤해서 1인 캡슐 안으로 들어가 보세요."], label: "나만의 자리를 만나다"},
+ {heading: ["문을 닫는 순간,", "공부만 남아요."], description: ["책상, 수납, 환기, 고농도 산소 공급까지 한 칸에 담았어요.", "시험 준비에만 쓰는 한 사람의 공간이에요."], label: "몰입의 안쪽으로"},
+ {heading: ["조명도 소리도,", "내 컨디션대로."], description: ["스탠드 밝기와 색, 환기, 백색소음까지.", "아래 버튼이나 스탠드 패널로 직접 맞춰 보세요."], label: "내 컨디션에 맞추다"},
 ];
 type CapsuleStyle = CSSProperties & {"--light-color": string};
 export default function CapsuleExperience() {
@@ -41,7 +41,7 @@ export default function CapsuleExperience() {
 <section className="journey" id="journey" ref={journeyRef} aria-label="스크롤로 캡슐 공간 둘러보기">
 <div className={chapter === 2 ? "stage inside" : "stage"}>
 <div className="ambient"></div>
-<div className="story"><div className="eyebrow">YOUR OWN LITTLE WORLD</div><h1 id="headline">{story.heading[0]} <br />{story.heading[1]}</h1><p id="description">{story.description[0]} <br />{story.description[1]}</p><div className="chapter"><span id="chapter">0{chapter + 1}</span><span className="line"></span><span id="chapter-name">{story.label}</span></div></div>
+<div className="story"><div className="eyebrow">1인 스터디 캡슐</div><h1 id="headline">{story.heading[0]} <br />{story.heading[1]}</h1><p id="description">{story.description[0]} <br />{story.description[1]}</p><div className="chapter"><span id="chapter">0{chapter + 1}</span><span className="line"></span><span id="chapter-name">{story.label}</span></div></div>
 <div className="room-wrap" id="room-wrap">
 <span className="room-loading">공간을 불러오는 중…</span>
 <CapsuleRoom progress={progress} opening={opening} panel={panel} onAction={dispatch} />
@@ -53,6 +53,6 @@ export default function CapsuleExperience() {
 </div>
 <div className="scroll-hint" id="scroll-hint" style={{opacity: chapter === 2 ? 0 : 1}}><span className="mouse"></span>스크롤해서 들어가기</div><div className="progress"><div id="progress" style={{width: `${progress * 100}%`}}></div></div>
 </div></section>
-<section className="closing"><div className="eyebrow">MAKE ROOM FOR YOURSELF</div><h2>집중의 시작은,<br />나만의 공간에서.</h2><p>작은 공간 안에 담긴 가능성.<br />실제 공간과 비교하며 나에게 맞는 자리를 찾아보세요.</p><div className="closing-actions"><button id="replay" onClick={() => scrollToProgress(0)}>다시 체험하기</button><a href="https://naver.me/xeAf3z7Q" target="_blank" rel="noopener noreferrer">네이버에서 실제 공간 보기</a></div><footer><span className="brand">studycap<span>●</span></span><span>공간 체험 프로토타입 · 실제 시설 및 사양과 다를 수 있습니다.</span></footer></section>
+<section className="closing"><div className="eyebrow">나만의 자리</div><h2>합격 하나만 보고,<br />내 페이스로.</h2><p>작지만 온전히 내 것인 공부 공간.<br />실제 공간을 둘러보고 나에게 맞는 자리를 찾아보세요.</p><div className="closing-actions"><button id="replay" onClick={() => scrollToProgress(0)}>다시 체험하기</button><a href="https://naver.me/xeAf3z7Q" target="_blank" rel="noopener noreferrer">네이버에서 실제 공간 보기</a></div><footer><span className="brand">studycap<span>●</span></span><span>공간 체험 프로토타입 · 실제 시설 및 사양과 다를 수 있습니다.</span></footer></section>
 </main></div>;
 }
