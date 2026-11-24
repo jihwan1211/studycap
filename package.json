@@ -6,7 +6,8 @@
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:parking": "node --experimental-strip-types src/lib/parking.check.ts && node --experimental-strip-types src/lib/kv.check.ts"
   },
   "dependencies": {
     "@react-three/fiber": "^9.8.2",
