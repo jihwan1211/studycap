@@ -7,9 +7,13 @@
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "check:parking": "node --experimental-strip-types src/lib/parking.check.ts && node --experimental-strip-types src/lib/kv.check.ts"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.18",
     "@react-three/fiber": "^9.8.2",
     "next": "latest",
     "react": "latest",
@@ -21,6 +25,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.187.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.148.0"
   }
 }
